@@ -2,7 +2,7 @@
 
 TaskVault is a task management application built using Vue.js and Vite, designed to enhance productivity and project management for individuals and teams. With a clean, modern interface, TaskVault allows users to create, organize, and track tasks, set priorities, and collaborate in real-time. The application is responsive, providing a smooth user experience across all devices.
 
-##Features
+## Features
 -Create and manage tasks with deadlines and priorities.
 -Organize tasks into projects or categories.
 -Real-time collaboration for team projects.
@@ -10,7 +10,7 @@ TaskVault is a task management application built using Vue.js and Vite, designed
 -Modern UI built with Tailwind CSS.
 -Fully responsive design for desktops, tablets, and mobile devices.
 
-##Tech Stack
+## Tech Stack
 -Vue.js - Frontend framework.
 -Vite - Lightning-fast build tool.
 -Tailwind CSS - For styling the UI.
@@ -19,9 +19,9 @@ TaskVault is a task management application built using Vue.js and Vite, designed
 -axios - for managing requests
 
 
-##Getting Started
+## Getting Started
 
-###Prerequisites
+### Prerequisites
 To run TaskVault on your local machine, you need to have Node.js and npm installed.
 
 Download Node.js and npm
@@ -33,7 +33,7 @@ npm -v
 ```
 Make sure both Node.js and npm are correctly installed.
 
-###Installation
+### Installation
 Clone this repository to your local machine:
 
 ```
