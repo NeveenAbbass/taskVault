@@ -1,8 +1,23 @@
 /* src/assets/tailwind.css */
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+body {
+  display: block;
+  background-color: var(--bgcolor);
+}
+
+
+.akaya {
+  font-family: "Akaya Telivigala", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 .light{

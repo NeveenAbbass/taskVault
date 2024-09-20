@@ -19,7 +19,8 @@ export default {
         danger_hover: "var(--dangerhover)",
         warning: "var(--warning)",
         warning_hover: "var(--warninghover)",
-      }
+      },
+      
     },
   },
   plugins: [],
