@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-bg_color">
+  <div class="flex items-center justify-center fixed inset-0 bg-gray-600 bg-opacity-50">
     <div class="bg-white shadow-lg rounded-xl px-10 py-16 w-full max-w-xl">
       <h2 class="text-4xl font-semibold text-primary_text text-center mb-2">Create an account</h2>
       
@@ -79,7 +79,7 @@
 
       <!-- login -->
       <div class="text-center">
-        <router-link to="/signup" class="text-sm text-paragraph_text hover:text-primary_color underline underline-offset-4">Already have an account? Login here</router-link>
+        <span class="text-sm text-paragraph_text hover:text-primary_color underline underline-offset-4">Already have an account? Login here</span>
       </div>
     </div>
   </div>
@@ -96,12 +96,7 @@ export default {
     };
   },
   methods: {
-    login() {
-      // Handle the login logic
-      console.log("Email:", this.email);
-      console.log("Password:", this.password);
-      console.log("Remember Me:", this.rememberMe);
-    },
+
   },
 };
 </script>

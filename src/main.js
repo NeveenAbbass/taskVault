@@ -4,8 +4,8 @@ import App from './App.vue';
 import './assets/tailwind.css';
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/HomPage.vue';
-import Login from './components/Login.vue';
-import Signup from './components/Signup.vue';
+import store from './store';
+
 
 
 const routes = [
@@ -14,16 +14,7 @@ const routes = [
     component : HomePage,
     name: HomePage,
   },
-  {
-    path: '/login',
-    component: Login,
-    name: Login,
-  },
-  {
-    path: '/signup',
-    component: Signup,
-    name: Signup,
-  }
+
 ];
 
 const router = createRouter({
@@ -34,5 +25,5 @@ const router = createRouter({
   },
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(store).mount("#app");
 

@@ -1,16 +1,32 @@
 <template>
   <div class="bg-bg_color w-full">
     <router-view></router-view>
+    <LogSignModal v-if="isModalOpen"/>
+
   </div>
 </template>
 
 <script>
 
-export default {
-  name: 'App'
-}
+import LogSignModal from './pages/LogSignModal.vue';
+import { mapState, mapActions } from 'vuex';
 
-document.body.classList.add("light")
+export default {
+  name: 'App',
+
+  components:{
+    LogSignModal,
+    
+  },
+
+  computed:{
+    ...mapState(["isModalOpen"]),
+  },
+
+  mounted(){
+    document.body.classList.add("light")
+  },
+}
 
 </script>
 

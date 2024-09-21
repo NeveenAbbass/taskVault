@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-bg_color">
+  <div class="flex items-center justify-center fixed inset-0 bg-gray-600 bg-opacity-50">
     <div class="bg-white shadow-lg rounded-xl px-10 py-16 w-full max-w-xl">
       <h2 class="text-4xl font-semibold text-primary_text text-center mb-2">Welcome Back</h2>
       <h3 class="text-lg font-medium text-paragraph_text mb-8">Login to your account</h3>
