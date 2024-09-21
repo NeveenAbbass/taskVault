@@ -12,15 +12,15 @@
 
       </ul>
 
-      <div class="flex gap-4">
-        <router-link class="border-b py-0 border-primary_color" to="/login">sign in</router-link>
+      <div class="flex gap-4 items-center">
+        <router-link class="underline underline-offset-8 underline-primary_color py-0 border-primary_color" to="/login">sign in</router-link>
         <router-link class="bg-primary_color text-white px-6 py-2 rounded-full" to="/signup">sign up</router-link>
       </div>
 
     </nav>
 
     <main class="flex flex-col items-center">
-      <h1 class="text-primary_text text-7xl mt-64 mb-10 text-center akaya">Regain control over your time</h1>
+      <h1 class="text-primary_text text-6xl mt-64 mb-10 text-center font-medium">Regain control over your time</h1>
       <router-link class="bg-primary_color text-white px-10 py-2 rounded-full w-fit" to="/signup">start free now!</router-link>
     </main>
 

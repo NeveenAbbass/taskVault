@@ -4,6 +4,8 @@ import App from './App.vue';
 import './assets/tailwind.css';
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/HomPage.vue';
+import Login from './components/Login.vue';
+import Signup from './components/Signup.vue';
 
 
 const routes = [
@@ -11,6 +13,16 @@ const routes = [
     path:'/',
     component : HomePage,
     name: HomePage,
+  },
+  {
+    path: '/login',
+    component: Login,
+    name: Login,
+  },
+  {
+    path: '/signup',
+    component: Signup,
+    name: Signup,
   }
 ];
 
