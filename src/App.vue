@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-bg_color w-full">
+  <div class="bg-bg_color px-0 py-0">
     <router-view></router-view>
     <LogSignModal v-if="isModalOpen"/>
 
@@ -16,13 +16,11 @@ export default {
 
   components:{
     LogSignModal,
-    
   },
 
   computed:{
-    ...mapState(["isModalOpen"]),
+    ...mapState(["isModalOpen", "modalVal"]),
   },
-
   mounted(){
     document.body.classList.add("light")
   },

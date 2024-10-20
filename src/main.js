@@ -4,6 +4,7 @@ import App from './App.vue';
 import './assets/tailwind.css';
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/HomPage.vue';
+import UserDashboard from './pages/UserDashboard.vue';
 import store from './store';
 
 
@@ -14,6 +15,12 @@ const routes = [
     component : HomePage,
     name: HomePage,
   },
+
+  {
+    path:'/dash/:userName',
+    component : UserDashboard,
+    name: UserDashboard,
+  }
 
 ];
 

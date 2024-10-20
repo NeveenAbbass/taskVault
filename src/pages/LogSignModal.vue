@@ -6,6 +6,7 @@
 <script>
 import Login from '../components/Login.vue';
 import Signup from '../components/Signup.vue';
+import { mapState} from 'vuex';
 export default {
   name: "LogSignModal",
   components: {
@@ -13,10 +14,8 @@ export default {
     Signup
   },
 
-  data(){
-    return{
-      modalVal: "Signup",
-    }
+  computed:{
+    ...mapState(["modalVal"]),
   }
 
 }
