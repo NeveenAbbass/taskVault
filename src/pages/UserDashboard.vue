@@ -11,8 +11,8 @@
       </div>
 
       <div class="flex pt-16 ps-2">
-        <img src="../assets/imgs/overview.png" alt="logo" @click="fold = false">
-        <span class="ps-5" v-if="!fold">Overview</span>
+          <img src="../assets/imgs/overview.png" alt="logo" @click="fold = false">
+          <span class="ps-5" v-if="!fold">Overview</span>
       </div>
 
       <div class="flex pt-8 ps-2">
@@ -22,22 +22,34 @@
 
       <div class="flex pt-8 ps-2">
         <img src="../assets/imgs/settings.png" alt="logo" @click="fold = false">
-        <span class="ps-5 text-paragraphtext" v-if="!fold">Task</span>
+        <span class="ps-5 text-paragraphtext" v-if="!fold">Settings</span>
       </div>
 
-      <div class="sticky bottom-0">
-      <img src="../assets/imgs/arrow-left.svg" alt="">
+      <div class="pt-64 ps-36" v-if="!fold" @click="fold = true">
+      <img src="../assets/imgs/arrow-left.svg" alt="fold">
+     </div>
+
+     <div class="pt-64 ps-12" v-else @click="fold = false">
+       <img src="../assets/imgs/arrow-right.svg" alt="unfold">
      </div>
 
     </nav> 
+
+    
+    
+
     </div>
 </template>
 
 <script>
-import TaskCard from './TaskCard.vue';
+import TaskCard from '../components/TaskCard.vue';
+import Settings from '../components/Settings.vue';
+import FullTask from '../components/FullTask.vue';
+import SingleTask from '../components/SingleTask.vue';
+
 export default {
   name : 'UserDashboard',
-  components: { TaskCard },
+  components: { TaskCard, Settings, FullTask, SingleTask },
   data(){
     return{
      fold: false,
