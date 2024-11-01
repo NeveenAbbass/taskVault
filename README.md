@@ -16,7 +16,8 @@ TaskVault is a task management application built using Vue.js and Vite, designed
 -Tailwind CSS - For styling the UI.
 -Vue Router - For managing app navigation.
 -Vuex - for state management.
--axios - for managing requests</pre>
+-axios - for managing requests
+-.env -for creating, storing and using environment variables</pre>
 
 
 ## Getting Started
