@@ -19,6 +19,8 @@ export default {
         danger_hover: "var(--dangerhover)",
         warning: "var(--warning)",
         warning_hover: "var(--warninghover)",
+        dark_text: "var(--darktext)",
+        lighter_dark: "var(--lighter-text)"
       },
       
     },

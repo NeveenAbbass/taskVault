@@ -6,11 +6,15 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from './pages/HomPage.vue';
 import UserDashboard from './pages/UserDashboard.vue';
-import FullTask from './components/FullTask.vue';
+import Overview from './components/Overview.vue';
 import SingleTask from './components/SingleTask.vue';
 import Settings from './components/Settings.vue';
 
 import store from './store';
+import VueApexCharts from "vue3-apexcharts";
+import { register } from 'swiper/element/bundle';
+
+register();
 
 
 
@@ -29,8 +33,8 @@ const routes = [
 
   {
     path: "/overview",
-    component: FullTask,
-    name: FullTask,
+    component: Overview,
+    name: Overview,
   },
 
   {
@@ -56,5 +60,5 @@ const router = createRouter({
   },
 });
 
-createApp(App).use(router).use(store).mount("#app");
+createApp(App).use(router).use(store).use(VueApexCharts).component("apexchart", VueApexCharts).mount("#app");
 

@@ -3,7 +3,7 @@
 
       <!-- -----------------------navbar----------------- -->
     <nav 
-    class="bg-white h-[100vh] sticky top-0 left-0 "
+    class="sidebar-container"
     :class="fold ? 'custom-shadow pt-8 ps-8 w-32 rounded-2xl transition-all' : 'custom-shadow pt-8 ps-8 w-64 rounded-2xl transition-all'">
       <div>
         <img src="../assets/imgs/Logo.svg" alt="logo" v-if="!fold">
@@ -35,29 +35,41 @@
 
     </nav> 
 
-    
-    
-
+    <main 
+    :class="fold ? 'ps-24' : 'ps-52'"
+    class="flex justify-start">
+       <Overview/>
+    </main>
     </div>
 </template>
 
 <script>
 import TaskCard from '../components/TaskCard.vue';
 import Settings from '../components/Settings.vue';
-import FullTask from '../components/FullTask.vue';
+import Overview from '../components/Overview.vue';
 import SingleTask from '../components/SingleTask.vue';
 
 export default {
   name : 'UserDashboard',
-  components: { TaskCard, Settings, FullTask, SingleTask },
+  components: { TaskCard, Settings, Overview, SingleTask },
   data(){
     return{
-     fold: false,
+     fold: true,
     }
   }
 }
 </script>
 
 <style>
+
+.sidebar-container {
+    display: block;
+    position: fixed; /* Stick to the left */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: white;
+}
 
 </style>

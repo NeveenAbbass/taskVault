@@ -1,0 +1,88 @@
+<template>
+  <div class="flex">
+    <!-- -------------------------main section------------------------- -->
+    <main class="pt-10 text-start">
+      <h1 class="font-semibold text-3xl text-primary_text">Hi, Dennis</h1>
+      <h2 class="font-semibold text-m text-dark_text">
+        let's finish your task today!
+      </h2>
+      <div class="flex gap-10">
+        <section class="mt-8">
+          <RunningTask />
+        </section>
+
+        <!-- ---------------------------------chart----------------------------- -->
+        <div class="mt-8 bg-white rounded-lg">
+          <apexchart
+            type="area"
+            height="200"
+            width="400"
+            :options="chartOptions"
+            :series="series"
+          ></apexchart>
+        </div>
+      </div>
+      <!-- ---------------------------------upcoming tasks------------------------------ -->
+      <section class="my-8 w-[700px]">
+        <h3 class="text-2xl font-medium text-primary_text mb-8">
+          Upcoming Tasks
+        </h3>
+        <swiper-container
+          slides-per-view="2"
+          speed="500"
+          autoplay="true"
+          loop="true"
+          navigation="true"
+        >
+          <swiper-slide><TaskCard /></swiper-slide>
+          <swiper-slide><TaskCard /></swiper-slide>
+          <swiper-slide><TaskCard /></swiper-slide>
+          <swiper-slide><TaskCard /></swiper-slide>
+        </swiper-container>
+      </section>
+    </main>
+    <aside></aside>
+  </div>
+</template>
+
+<script>
+import RunningTask from "./RunningTask.vue";
+import TaskCard from "./TaskCard.vue";
+
+export default {
+  name: "Overview",
+  components: { RunningTask, TaskCard },
+  data() {
+    return {
+      series: [
+        {
+          name: "Complete Tasks",
+          data: [2, 4, 8, 5, 4, 9, 10],
+        },
+      ],
+      chartOptions: {
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          categories: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug"],
+        },
+        tooltip: {
+          x: {
+            format: "dd/MM/yy HH:mm",
+          },
+        },
+      },
+    };
+  },
+};
+</script>
+
+<style></style>
