@@ -9,7 +9,9 @@
 
 
 
-*{
+*
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -35,9 +37,15 @@ body{
   font-style: normal;
 }
 
+aside {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 
 .light{
   --bgcolor: #f9fafb;
+  --bggray:#e8ebf1;
   --white: #ffffff;
   --primarytext: #111827;
   --primaryblue: #546FFF;

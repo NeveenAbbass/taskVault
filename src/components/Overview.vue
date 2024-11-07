@@ -1,7 +1,7 @@
 <template>
-  <div class="flex">
+  <div class="flex w-full gap-5">
     <!-- -------------------------main section------------------------- -->
-    <main class="pt-10 text-start">
+    <main class="pt-10 text-start w-2/3">
       <h1 class="font-semibold text-3xl text-primary_text">Hi, Dennis</h1>
       <h2 class="font-semibold text-m text-dark_text">
         let's finish your task today!
@@ -12,18 +12,20 @@
         </section>
 
         <!-- ---------------------------------chart----------------------------- -->
+      <div class="px-4 pb-4 bg-gray_bg rounded-lg overflow-hidden">
         <div class="mt-8 bg-white rounded-lg">
           <apexchart
             type="area"
             height="200"
-            width="400"
+            width="500"
             :options="chartOptions"
             :series="series"
           ></apexchart>
         </div>
+       </div>
       </div>
       <!-- ---------------------------------upcoming tasks------------------------------ -->
-      <section class="my-8 w-[700px]">
+      <section class="my-8 w-[800px] overflow-hidden">
         <h3 class="text-2xl font-medium text-primary_text mb-8">
           Upcoming Tasks
         </h3>
@@ -41,17 +43,20 @@
         </swiper-container>
       </section>
     </main>
-    <aside></aside>
+    <aside class="bg-gray_bg w-1/3 flex-shrink-0 mx-auto pt-10">
+      <TaskToday class="mt-10"/>
+    </aside>
   </div>
 </template>
 
 <script>
 import RunningTask from "./RunningTask.vue";
 import TaskCard from "./TaskCard.vue";
+import TaskToday from "./TaskToday.vue";
 
 export default {
   name: "Overview",
-  components: { RunningTask, TaskCard },
+  components: { RunningTask, TaskCard, TaskToday },
   data() {
     return {
       series: [

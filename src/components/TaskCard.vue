@@ -6,6 +6,7 @@
   <span class="text-lg font-medium">Progress</span>
   <span class="float-right">70%</span>
   
+  <!-- ----------progress bar---------- -->
 <div class="w-full bg-lighter_dark rounded-full h-1.5">
   <div class="bg-primary_color h-1.5 rounded-full" style="width: 45%"></div>
 </div>

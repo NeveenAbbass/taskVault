@@ -20,7 +20,8 @@ export default {
         warning: "var(--warning)",
         warning_hover: "var(--warninghover)",
         dark_text: "var(--darktext)",
-        lighter_dark: "var(--lighter-text)"
+        lighter_dark: "var(--lighter-text)",
+        gray_bg: "var(--bggray)"
       },
       
     },

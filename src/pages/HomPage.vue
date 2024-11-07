@@ -40,7 +40,7 @@
 
     <main class="flex flex-col items-center">
       <h1 class="text-primary_text text-6xl mt-44 md:mt-64 mb-10 text-center font-medium">Regain control over your time</h1>
-      <span class="bg-primary_color text-white md:px-10 px-5 py-2 rounded-full w-fit cursor-pointer hover:text-primary_color hover:bg-white border hover:border-primary_color" @click="openSignup">start free now!</span>
+      <span class="bg-primary_color text-white md:px-10 px-5 py-2 rounded-full w-fit cursor-pointer text-[12px] md:text-base hover:text-primary_color hover:bg-white border hover:border-primary_color" @click="openSignup">start free now!</span>
     </main>
 
   </div>
