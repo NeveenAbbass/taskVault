@@ -1,7 +1,7 @@
 <template>
-  <div class="flex w-full gap-5">
+  <div class="flex gap-5 ">
     <!-- -------------------------main section------------------------- -->
-    <main class="pt-10 text-start w-2/3">
+    <main class="pt-10 text-start md:w-1/2 lg:w-2/3 z-10 mx-0">
       <h1 class="font-semibold text-3xl text-primary_text">Hi, Dennis</h1>
       <h2 class="font-semibold text-m text-dark_text">
         let's finish your task today!
@@ -35,6 +35,7 @@
           autoplay="true"
           loop="true"
           navigation="true"
+          class="overflow-hidden"
         >
           <swiper-slide><TaskCard /></swiper-slide>
           <swiper-slide><TaskCard /></swiper-slide>
@@ -43,7 +44,7 @@
         </swiper-container>
       </section>
     </main>
-    <aside class="bg-gray_bg w-1/3 flex-shrink-0 mx-auto pt-10">
+    <aside class="bg-gray_bg w-full md:w-1/2 lg:w-1/3 overflow-hidden flex-shrink-0 mx-0">
       <TaskToday class="mt-10"/>
     </aside>
   </div>

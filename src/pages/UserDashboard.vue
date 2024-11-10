@@ -3,7 +3,7 @@
 
       <!-- -----------------------navbar----------------- -->
     <nav 
-    class="sidebar-container"
+    class="sticky top-0 h-screen"
     :class="fold ? 'custom-shadow pt-8 ps-8 w-32 rounded-2xl transition-all' : 'custom-shadow pt-8 ps-8 w-64 rounded-2xl transition-all'">
       <div>
         <img src="../assets/imgs/Logo.svg" alt="logo" v-if="!fold">
@@ -62,14 +62,5 @@ export default {
 
 <style>
 
-.sidebar-container {
-    display: block;
-    position: fixed; /* Stick to the left */
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow-y: auto;
-    background-color: white;
-}
 
 </style>

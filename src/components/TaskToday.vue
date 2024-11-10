@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 bg-white rounded-lg mx-5 w-full">
+  <div class="p-5 bg-white rounded-lg w-full">
     <p class="text-xl font-semibold text-start">Task Today</p>
     <img src="../assets/imgs/tryal.png" alt="the task representantive image" width="400" height="100" class="mx-auto rounded-lg my-5">
     <p class="text-lg font-semibold text-start">Creating UI/UX project</p>
