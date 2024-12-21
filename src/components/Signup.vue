@@ -119,7 +119,7 @@
       <!-- --------------------google registeration-------------- -->
 
       <div
-        class="flex justify-center bg-white px-4 text-sm mx-auto w-3/4 py-2 my-2 rounded-lg shadow-md hover:bg-gray-100"
+        class="flex justify-center bg-white px-4 text-sm mx-auto w-3/4 py-2 my-2 rounded-lg shadow-md hover:bg-gray-100 cursor-pointer"
         @click="googleRegister"
         >
         <img src="../assets/imgs/google.svg" alt="google" class="w-4 h-4" />

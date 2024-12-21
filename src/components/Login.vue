@@ -66,7 +66,7 @@
       </form>
       <div class="text-center">or</div>
       <div
-        class="flex justify-center bg-white px-4 text-sm mx-auto w-3/4 py-2 my-2 rounded-lg shadow-md hover:bg-gray-100"
+        class="flex justify-center cursor-pointer bg-white px-4 text-sm mx-auto w-3/4 py-2 my-2 rounded-lg shadow-md hover:bg-gray-100"
         @click="loginWithGoogle"
       >
         <img src="../assets/imgs/google.svg" alt="google" class="w-4 h-4" />
@@ -98,6 +98,7 @@
 import { auth } from "../firebase.js";
 import { signInWithEmailAndPassword, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from "firebase/auth";
 
+
 export default {
   name: "Login",
   data() {
@@ -117,7 +118,9 @@ export default {
         .then((userCredential) => {
           const user = userCredential.user;
           console.log("successfully signed in");
-          // ...
+          this.$router.push('/dash/:userName');
+          this.closeModal();
+
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -132,6 +135,10 @@ export default {
       signInWithPopup(auth, provider)
         .then((result) => {
           console.log(result.user);
+          this.$router.push('/dash/:userName');
+          this.closeModal();
+
+
         })
         .catch((error) => {
           console.log(error)

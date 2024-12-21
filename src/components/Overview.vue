@@ -1,33 +1,37 @@
 <template>
-  <div class="flex gap-5 ">
+  <div class="flex w-full flex-wrap">
     <!-- -------------------------main section------------------------- -->
-    <main class="pt-10 text-start md:w-1/2 lg:w-2/3 z-10 mx-0">
+    <main class="text-start w-full lg:w-2/3 mx-0 pt-10 ps-6">
       <h1 class="font-semibold text-3xl text-primary_text">Hi, Dennis</h1>
       <h2 class="font-semibold text-m text-dark_text">
         let's finish your task today!
       </h2>
-      <div class="flex gap-10">
-        <section class="mt-8">
-          <RunningTask />
-        </section>
 
-        <!-- ---------------------------------chart----------------------------- -->
-      <div class="px-4 pb-4 bg-gray_bg rounded-lg overflow-hidden">
-        <div class="mt-8 bg-white rounded-lg">
+        <!-- ---------------------------------chart and calender----------------------------- -->
+      <section class="flex gap-4 mt-6">
+
+      <!-- ---------------------chart------------------------------- -->
+        <div class="px-4 pb-4 bg-gray_bg rounded-lg overflow-hidden">
+        <div class="mt-5 bg-white rounded-lg">
           <apexchart
             type="area"
-            height="200"
-            width="500"
+            height="130"
+            width="350"
             :options="chartOptions"
             :series="series"
           ></apexchart>
         </div>
        </div>
-      </div>
+
+       <!-- ---------------------------calender------------------------------ -->
+       <div class="px-4 bg-gray_bg rounded-lg overflow-hidden flex items-ceter">
+          <WeeklyCalender />
+        </div>
+    </section>
       <!-- ---------------------------------upcoming tasks------------------------------ -->
       <section class="my-8 w-[800px] overflow-hidden">
         <h3 class="text-2xl font-medium text-primary_text mb-8">
-          Upcoming Tasks
+          Upcoming Projects
         </h3>
         <swiper-container
           slides-per-view="2"
@@ -37,14 +41,14 @@
           navigation="true"
           class="overflow-hidden"
         >
-          <swiper-slide><TaskCard /></swiper-slide>
-          <swiper-slide><TaskCard /></swiper-slide>
-          <swiper-slide><TaskCard /></swiper-slide>
-          <swiper-slide><TaskCard /></swiper-slide>
+          <swiper-slide 
+          v-for="project in projects"
+          :key="project.id"
+          ><TaskCard :project="project" /></swiper-slide>
         </swiper-container>
       </section>
     </main>
-    <aside class="bg-gray_bg w-full md:w-1/2 lg:w-1/3 overflow-hidden flex-shrink-0 mx-0">
+    <aside class="lg:bg-gray_bg w-full lg:w-1/3 overflow-hidden mx-0 px-6">
       <TaskToday class="mt-10"/>
     </aside>
   </div>
@@ -54,12 +58,20 @@
 import RunningTask from "./RunningTask.vue";
 import TaskCard from "./TaskCard.vue";
 import TaskToday from "./TaskToday.vue";
+import CrudMixins from "../mixins/CrudMixins";
+import WeeklyCalender from "./WeeklyCalender.vue";
 
 export default {
   name: "Overview",
-  components: { RunningTask, TaskCard, TaskToday },
+  components: { RunningTask, TaskCard, TaskToday, WeeklyCalender },
+  mixins: [CrudMixins],
+
+  created(){
+    this.getProjects();
+  },
   data() {
     return {
+      projects: [],
       series: [
         {
           name: "Complete Tasks",

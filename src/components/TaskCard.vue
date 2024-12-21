@@ -1,8 +1,8 @@
 <template>
   <div class="bg-white rounded-lg px-4 py-5 w-72">
   <img src="../assets/imgs/tryal.png" alt="the task representantive image" width="280" height="100" class="mx-auto rounded-lg">
-  <p class="text-lg font-semibold pt-3">Creating Mobile app design</p>
-  <p class="text-dark_text pb-4">UI/UX Design</p>
+  <p class="text-lg font-semibold pt-3">{{ this.project.title }}</p>
+  <p class="text-dark_text pb-4">{{ this.project.details }}</p>
   <span class="text-lg font-medium">Progress</span>
   <span class="float-right">70%</span>
   
@@ -21,6 +21,9 @@
 <script>
 export default {
   name : 'TaskCard',
+  props: [
+    "project"
+  ]
 }
 </script>
 

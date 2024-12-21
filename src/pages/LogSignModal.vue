@@ -1,5 +1,5 @@
 <template>
-      <component v-bind:is="modalVal">
+      <component v-bind:is="modalVal" class="z-10">
     </component>
 </template>
 

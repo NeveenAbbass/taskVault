@@ -21,8 +21,6 @@ const firebaseConfig = {
 };
 
 
-console.log(import.meta.env.VITE_API_KEY) 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

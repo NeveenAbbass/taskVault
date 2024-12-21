@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="flex">
 
       <!-- -----------------------navbar----------------- -->
     <nav 
-    class="sticky top-0 h-screen"
-    :class="fold ? 'custom-shadow pt-8 ps-8 w-32 rounded-2xl transition-all' : 'custom-shadow pt-8 ps-8 w-64 rounded-2xl transition-all'">
+    class="hidden md:block top-0 h-screen custom-shadow pt-8 ps-8 rounded-2xl bg-white"
+    :class="fold ? 'w-32 transition-all' : 'w-64 transition-all'">
       <div>
         <img src="../assets/imgs/Logo.svg" alt="logo" v-if="!fold">
         <img src="../assets/imgs/tilte-icon.svg" alt="logo" v-else>
@@ -35,9 +35,7 @@
 
     </nav> 
 
-    <main 
-    :class="fold ? 'ps-24' : 'ps-52'"
-    class="flex justify-start">
+    <main class="w-full">
        <Overview/>
     </main>
     </div>
